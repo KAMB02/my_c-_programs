@@ -47,15 +47,13 @@ Complexe soustraction(Complexe A, Complexe B) {
 
 // Fonction pour multiplier deux nombres complexes
 Complexe produit(Complexe A, Complexe B) {
-    return Complexe(A.reel * B.reel - A.imaginaire * B.imaginaire,
-                    A.reel * B.imaginaire + A.imaginaire * B.reel);
+    return Complexe(A.reel * B.reel - A.imaginaire * B.imaginaire,A.reel * B.imaginaire + A.imaginaire * B.reel);
 }
 
 // Fonction pour diviser deux nombres complexes
 Complexe quotient(Complexe A, Complexe B) {
     float denominateur = B.reel * B.reel + B.imaginaire * B.imaginaire;
-    return Complexe((A.reel * B.reel + A.imaginaire * B.imaginaire) / denominateur,
-                    (A.imaginaire * B.reel - A.reel * B.imaginaire) / denominateur);
+    return Complexe((A.reel * B.reel + A.imaginaire * B.imaginaire) / denominateur,(A.imaginaire * B.reel - A.reel * B.imaginaire) / denominateur);
 }
 
 // Fonction pour calculer la norme d'un nombre complexe
@@ -63,7 +61,7 @@ float norme(Complexe A) {
     return (A.reel * A.reel + A.imaginaire * A.imaginaire);
 }
 
-// Fonction pour obtenir le conjugué d'un nombre complexe
+// Fonction pour obtenir le conjuguÃ© d'un nombre complexe
 Complexe conjugue(Complexe A) {
     return Complexe(A.reel, -A.imaginaire);
 }
@@ -79,15 +77,15 @@ int main() {
     cout<<"Entrer la valeur de la partie reel imaginaire de B"<<endl;
     cin>>c>>d;
 
-    // Création de deux nombres complexes
+    // CrÃ©ation de deux nombres complexes
     Complexe A(a,b);
     Complexe B(c,d);
 
     // Appel de la fonction addition
     Complexe resultat = addition(A, B);
 
-    // Affichage du résultat
-    cout << "Résultat : ";
+    // Affichage du rÃ©sultat
+    cout << "RÃ©sultat : ";
     resultat.affiche();
 
     return 0;
