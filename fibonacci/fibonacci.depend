@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743155163 source:c:\users\hp\onedrive\desktop\mes_programmes\new projet c++\classe_2\fibonacci\main.cpp
+	<iostream>
+	<math.h>
+
